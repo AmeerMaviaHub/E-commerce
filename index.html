@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌤️ Weather App</h1>
+        
+        <div class="search-box">
+            <input 
+                type="text" 
+                id="locationInput" 
+                placeholder="City ka naam likho... (e.g., London, Karachi)"
+            >
+            <button onclick="getWeather()">Search</button>
+        </div>
+
+        <div id="loading" class="loading">Loading...</div>
+        <div id="error" class="error"></div>
+
+        <div id="weatherResult" class="weather-result">
+            <div id="locationName" class="location-name"></div>
+            
+            <div class="weather-main">
+                <div class="temp-section">
+                    <div id="temperature" class="temperature"></div>
+                    <div id="condition" class="condition"></div>
+                </div>
+                <div id="weatherIcon" class="icon"></div>
+            </div>
+
+            <div class="details">
+                <div class="detail">
+                    <span class="label">Feels Like</span>
+                    <span id="feelsLike" class="value"></span>
+                </div>
+                <div class="detail">
+                    <span class="label">Humidity</span>
+                    <span id="humidity" class="value"></span>
+                </div>
+                <div class="detail">
+                    <span class="label">Wind Speed</span>
+                    <span id="windSpeed" class="value"></span>
+                </div>
+                <div class="detail">
+                    <span class="label">Pressure</span>
+                    <span id="pressure" class="value"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
